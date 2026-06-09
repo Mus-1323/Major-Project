@@ -21,6 +21,7 @@ const LocalStrategy = require("passport-local");
 const User = require("./models/user.js");
 
 const MongoStore = require("connect-mongo");
+const crypto = require("crypto");
 
 const dbUrl = process.env.ATLASDB_URL;
 
