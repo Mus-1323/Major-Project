@@ -1,0 +1,43 @@
+<% layout('/layout/boilerplate') -%>
+ <div class="row">
+    <div class="col-8 offset-2">
+        <br><br>
+    <h3>ADD TO THE LIST</h3>
+    <form method="POST" action="/listing" novalidate   class="needs-validation" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="title" class="form-label">title</label>
+            <input type="text" placeholder="Enter the catchy title" name="listing[title]" required class="form-control"> 
+            <div class="invalid-feedback">Title is good</div>
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <textarea placeholder="enter the description" name="listing[description]"  required class="form-control"></textarea>
+            <div class="invalid-feedback">Description should be filled up properly</div>
+        </div>
+        <div  class="row">
+        <div class="mb-3 col-md-4">
+             <label for="price" class="form-label">Price</label>
+             <input type="number" placeholder="13000" name="listing[price]" required  class="form-control">
+             <div class="invalid-feedback"> Price should be filled up properly</div>
+        </div>
+        <div class="mb-3 col-md-8">
+            <label for="country" class="form-label">Country</label>
+            <input type="text" placeholder="India" name="listing[country]" required class="form-control">
+            <div class="invalid-feedback">Country should be filled up properly</div>
+        </div>
+        </div>
+        <div>
+            <label for="location" class="form-label">Location</label>
+            <input type="text" placeholder="Jaipur,Rajasthan " name="listing[location]"   required  class="form-control">
+            <div class="invalid-feedback">Location should be filled up properly</div>
+        </div>
+        <div class="mb-3">
+             <label for="image" class="form-label">Image</label>
+             <input type="file" placeholder="enter the url " name="listing[image]"    class="form-control">
+        </div>
+        <button class="btn btn-dark  add-btn ">Add</button>
+        <br><br>
+    </form>
+</div>
+</div>
+
